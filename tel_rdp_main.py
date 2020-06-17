@@ -1,9 +1,12 @@
 # Python 3 server example
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import time
+import tel_rdp_utils
 
-hostName = "192.168.21.145"
-serverPort = 8888
+setting =   tel_rdp_utils.setting()
+
+hostName    = setting.hostName
+serverPort  = setting.serverPort
 
 class MyServer(BaseHTTPRequestHandler):
     def do_GET(self):
