@@ -4,7 +4,7 @@ import configparser
 import os,time
 
 
-path    = "bb_setting.ini"
+path    = "tr_setting.ini"
 
 
 def return_datetime_str():
@@ -63,12 +63,12 @@ class setting():
         config.read(self.path)
 
         self.hostName = config.get("server", "hostName")
-        self.serverPort = config.get("server", "serverPort")
+        self.serverPort = int(config.get("server", "serverPort"))
 
 
         self.setting = {
             'hostName'  : self.hostName,
-            'serverPort': self.serverPort,
+            'serverPort': int(self.serverPort),
         }
 
     def print_setting(self):
