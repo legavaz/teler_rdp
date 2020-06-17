@@ -1,10 +1,10 @@
-# Python 3 server example
+# https://github.com/legavaz/teler_rdp.git
+
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import time
 import tel_rdp_utils
 
-setting =   tel_rdp_utils.setting()
-
+setting     =   tel_rdp_utils.setting()
 hostName    = setting.hostName
 serverPort  = setting.serverPort
 
